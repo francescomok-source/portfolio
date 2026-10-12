@@ -11,9 +11,7 @@ html {
 body {
   margin: 0;
   min-height: 100vh;
-  background:
-    radial-gradient(900px 520px at 0% -10%, rgba(100, 255, 218, 0.07), transparent 55%),
-    var(--bg);
+  background: var(--bg);
   color: var(--text-dim);
   font-family: var(--sans);
   font-size: 16px;
@@ -26,12 +24,12 @@ body.lock {
 }
 
 ::selection {
-  background: rgba(100, 255, 218, 0.28);
-  color: #e6f1ff;
+  background: var(--line);
+  color: var(--text);
 }
 
 :focus-visible {
-  outline: 2px solid var(--accent);
+  outline: 2px solid var(--violet);
   outline-offset: 3px;
 }
 
@@ -64,7 +62,7 @@ img {
   left: 16px;
   top: -48px;
   z-index: 20;
-  background: var(--accent);
+  background: var(--violet);
   color: var(--bg);
   padding: 8px 12px;
   font-weight: 600;
@@ -98,19 +96,7 @@ img {
   padding: 48px 0 28px;
   overflow-y: auto;
   scrollbar-width: thin;
-  scrollbar-color: rgba(136, 146, 176, 0.4) transparent;
-}
-
-.brand-mark {
-  display: flex;
-  align-items: center;
-  gap: 10px;
-  margin-bottom: 28px;
-  color: var(--accent);
-  font-family: var(--mono);
-  font-size: 12px;
-  letter-spacing: 0.14em;
-  text-transform: uppercase;
+  scrollbar-color: rgba(67, 36, 95, 0.35) transparent;
 }
 
 .eyebrow {
@@ -121,15 +107,15 @@ img {
 }
 
 .side h1 {
-  color: var(--text);
-  font-size: 2.7rem;
+  color: var(--violet);
+  font-size: 3.35rem;
   line-height: 1.05;
   letter-spacing: -0.045em;
   font-weight: 600;
 }
 
 .accent-dot {
-  color: var(--accent);
+  color: var(--accent-2);
 }
 
 .role {
@@ -177,9 +163,9 @@ img {
   gap: 8px;
   min-height: 44px;
   padding: 10px 16px;
-  border: 1px solid rgba(100, 255, 218, 0.55);
+  border: 1px solid var(--accent-line);
   border-radius: 4px;
-  color: var(--accent);
+  color: var(--violet);
   background: transparent;
   font-family: var(--mono);
   font-size: 13px;
@@ -189,7 +175,8 @@ img {
 
 .btn:hover {
   background: var(--accent-soft);
-  border-color: var(--accent);
+  border-color: var(--accent-2);
+  color: var(--accent-2);
 }
 
 .btn-ghost {
@@ -198,8 +185,8 @@ img {
 }
 
 .btn-ghost:hover {
-  border-color: var(--accent);
-  color: var(--accent);
+  border-color: var(--accent-2);
+  color: var(--accent-2);
 }
 
 .nav {
@@ -226,15 +213,22 @@ img {
   transition: width 0.2s ease, background 0.2s ease;
 }
 
-.nav a:hover,
-.nav a[aria-current="true"] {
-  color: var(--text);
+.nav a:hover {
+  color: var(--accent-2);
 }
 
-.nav a:hover::before,
+.nav a[aria-current="true"] {
+  color: var(--violet);
+}
+
+.nav a:hover::before {
+  width: 48px;
+  background: var(--accent-2);
+}
+
 .nav a[aria-current="true"]::before {
   width: 48px;
-  background: var(--accent);
+  background: var(--violet);
 }
 
 .nav-index {
@@ -258,17 +252,17 @@ img {
   width: 8px;
   height: 8px;
   border-radius: 50%;
-  background: var(--accent);
-  box-shadow: 0 0 0 0 rgba(100, 255, 218, 0.45);
+  background: var(--violet);
+  box-shadow: 0 0 0 0 var(--accent-2-soft);
   animation: pulse 2.6s ease-out infinite;
 }
 
 @keyframes pulse {
   70% {
-    box-shadow: 0 0 0 7px rgba(100, 255, 218, 0);
+    box-shadow: 0 0 0 7px rgba(67, 36, 95, 0);
   }
   100% {
-    box-shadow: 0 0 0 0 rgba(100, 255, 218, 0);
+    box-shadow: 0 0 0 0 rgba(67, 36, 95, 0);
   }
 }
 
@@ -328,7 +322,7 @@ img {
 }
 
 .section-heading h2 {
-  color: var(--text);
+  color: var(--violet);
   font-size: 1.7rem;
   font-weight: 600;
   letter-spacing: -0.03em;
@@ -374,6 +368,7 @@ img {
 
 .about-aside {
   background: var(--bg-elevated);
+  border: 1px solid var(--line);
   border-radius: var(--radius);
   padding: 16px;
 }
@@ -382,7 +377,7 @@ img {
   margin: 0 0 14px;
   padding: 3px;
   border-radius: 10px;
-  background: linear-gradient(145deg, var(--accent), rgba(100, 255, 218, 0.28) 58%, rgba(100, 255, 218, 0.08));
+  background: var(--line);
 }
 
 .portrait,
@@ -393,16 +388,14 @@ img {
   height: auto;
   border-radius: 8px;
   object-fit: cover;
-  object-position: center top;
+  object-position: center 22%;
 }
 
 .portrait {
   display: grid;
   place-items: center;
-  background:
-    linear-gradient(160deg, rgba(100, 255, 218, 0.16), transparent 55%),
-    #0a192f;
-  color: var(--accent);
+  background: var(--bg);
+  color: var(--violet);
   font-family: var(--mono);
   font-size: 28px;
   letter-spacing: 0.08em;
@@ -419,13 +412,14 @@ img {
   gap: 18px;
   margin-top: 22px;
   padding: 16px;
-  background: rgba(17, 34, 64, 0.78);
+  background: var(--bg-elevated);
+  border: 1px solid var(--line);
   border-radius: var(--radius);
 }
 
 .education h3 {
   margin-bottom: 6px;
-  color: var(--text);
+  color: var(--violet);
   font-size: 0.95rem;
 }
 
@@ -445,6 +439,7 @@ img {
   justify-content: center;
   padding: 8px 12px;
   background: #fff;
+  border: 1px solid var(--line);
   border-radius: 8px;
 }
 
@@ -462,6 +457,25 @@ img {
 
 .logo-rsf {
   height: 46px;
+}
+
+.logo-pair {
+  gap: 16px;
+}
+
+.logo-times {
+  color: var(--violet);
+  font-size: 2rem;
+  font-weight: 300;
+  line-height: 1;
+}
+
+.logo-salesforce {
+  display: block;
+  height: 68px;
+  width: auto;
+  max-width: 140px;
+  object-fit: contain;
 }
 
 .about-aside dl {
@@ -494,15 +508,15 @@ img {
 }
 
 .skill-split {
-  grid-template-columns: 1.15fr 0.85fr;
+  grid-template-columns: 1fr;
 }
 
 .skill-panel,
 .languages,
 .project,
 .interest {
-  background: rgba(17, 34, 64, 0.78);
-  border: 1px solid transparent;
+  background: var(--bg-elevated);
+  border: 1px solid var(--line);
   border-radius: var(--radius);
 }
 
@@ -515,7 +529,7 @@ img {
 .languages h3,
 .project-body h4,
 .job-body h4 {
-  color: var(--text);
+  color: var(--violet);
   font-size: 0.95rem;
   font-weight: 600;
   letter-spacing: -0.01em;
@@ -525,6 +539,70 @@ img {
   display: grid;
   grid-template-columns: 1fr 1fr;
   column-gap: 28px;
+}
+
+.tech-panel {
+  padding-bottom: 18px;
+}
+
+.tech-groups {
+  display: grid;
+  gap: 16px;
+  margin-top: 14px;
+}
+
+.tech-groups section {
+  padding: 0;
+}
+
+.tech-groups h4 {
+  margin: 0 0 8px;
+  color: var(--violet);
+  font-size: 0.82rem;
+  font-weight: 600;
+}
+
+.skill-panel.is-wide .tech-grid {
+  grid-template-columns: repeat(4, minmax(0, 1fr));
+  gap: 10px;
+}
+
+.skill-panel.is-wide .tech-grid-tools {
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+}
+
+.tech-grid li {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: flex-start;
+  gap: 6px;
+  padding: 14px 8px 12px;
+  text-align: center;
+  background: var(--bg);
+  border: 1px solid var(--line);
+  border-radius: 8px;
+}
+
+.tech-grid img {
+  width: 56px;
+  height: 56px;
+  object-fit: contain;
+}
+
+.tech-grid .skill-name {
+  font-size: 0.9rem;
+  line-height: 1.2;
+}
+
+.tech-grid .skill-level {
+  font-size: 0.68rem;
+}
+
+.tech-note {
+  color: var(--text-dim);
+  font-size: 0.68rem;
+  line-height: 1.3;
 }
 
 .skill {
@@ -552,7 +630,7 @@ img {
 .project-body h3,
 .interest h3,
 .goal h3 {
-  color: var(--text);
+  color: var(--violet);
 }
 
 .skill p,
@@ -597,7 +675,7 @@ img {
 }
 
 .project:hover {
-  border-color: rgba(100, 255, 218, 0.45);
+  border-color: var(--accent-line);
   transform: translateY(-3px);
 }
 
@@ -621,11 +699,11 @@ img {
   width: 8px;
   height: 8px;
   border-radius: 50%;
-  background: #233554;
+  background: var(--bg-hover);
 }
 
 .dots i:first-child {
-  background: #64ffda;
+  background: var(--accent-2);
 }
 
 .shots {
@@ -651,7 +729,7 @@ img {
   width: 100%;
   height: 300px;
   border-radius: 6px;
-  background: #07111f;
+  background: var(--bg);
 }
 
 .shot img {
@@ -662,7 +740,7 @@ img {
   display: grid;
   place-items: center;
   padding: 16px;
-  border: 1px dashed rgba(136, 146, 176, 0.45);
+  border: 1px dashed var(--accent-line);
   color: var(--text-dim);
   font-family: var(--mono);
   font-size: 12px;
@@ -763,6 +841,47 @@ img {
   font-size: 0.92rem;
 }
 
+.prior-list {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 14px;
+}
+
+.prior-job {
+  padding: 14px 16px 16px;
+  background: var(--bg-elevated);
+  border: 1px solid var(--line);
+  border-radius: var(--radius);
+}
+
+.prior-job h3 {
+  margin: 2px 0 6px;
+  color: var(--violet);
+  font-size: 0.98rem;
+  font-weight: 600;
+}
+
+.prior-job p {
+  color: var(--text-dim);
+  font-size: 0.92rem;
+}
+
+.prior-tags {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 6px;
+  margin-top: 10px;
+}
+
+.prior-tags li {
+  padding: 3px 7px;
+  border: 1px solid var(--line);
+  border-radius: 3px;
+  color: var(--accent);
+  font-family: var(--mono);
+  font-size: 11px;
+}
+
 .job {
   display: grid;
   grid-template-columns: 132px minmax(0, 1fr);
@@ -808,7 +927,7 @@ img {
 
 .developed li {
   padding: 12px;
-  background: rgba(10, 25, 47, 0.45);
+  background: var(--bg);
   border-radius: 6px;
 }
 
@@ -830,7 +949,7 @@ img {
 
 .interest {
   display: grid;
-  grid-template-columns: 64px minmax(0, 1fr);
+  grid-template-columns: auto minmax(0, 1fr);
   gap: 8px 14px;
   align-items: start;
 }
@@ -840,7 +959,7 @@ img {
 }
 
 .interest-gaming {
-  box-shadow: inset 2px 0 0 var(--accent);
+  box-shadow: inset 2px 0 0 var(--accent-2);
 }
 
 .interest-digital {
@@ -848,14 +967,17 @@ img {
 }
 
 .interest-icon {
-  width: 56px;
-  height: 56px;
-  color: var(--accent);
+  display: flex;
+  align-items: center;
+  height: 48px;
 }
 
-.interest-icon svg {
-  width: 100%;
-  height: 100%;
+.interest-icon img {
+  height: 48px;
+  width: auto;
+  max-width: 76px;
+  object-fit: contain;
+  display: block;
 }
 
 .interest h3,
@@ -893,7 +1015,7 @@ img {
 
 .contact-title {
   margin-top: 8px;
-  color: var(--text);
+  color: var(--violet);
   font-size: clamp(2.4rem, 5vw, 3.5rem);
   font-weight: 600;
   letter-spacing: -0.045em;
@@ -944,7 +1066,7 @@ html.js .reveal.is-in {
     width: 100%;
     margin: 0;
     padding: 12px 20px;
-    background: rgba(10, 25, 47, 0.92);
+    background: var(--scrim);
     backdrop-filter: blur(12px);
   }
 
@@ -1034,9 +1156,9 @@ html.js .reveal.is-in {
   .skill-panel.is-wide ul,
   .shots,
   .job,
-  .interest,
   .education,
-  .org-lockup {
+  .org-lockup,
+  .prior-list {
     grid-template-columns: 1fr;
   }
 
@@ -1047,6 +1169,11 @@ html.js .reveal.is-in {
   .logo-plate {
     justify-content: flex-start;
     width: fit-content;
+    max-width: 100%;
+  }
+
+  .logo-pair {
+    max-width: 100%;
   }
 
   .job-body::before {
@@ -1062,7 +1189,29 @@ html.js .reveal.is-in {
 
 @media (max-width: 640px) {
   .side h1 {
-    font-size: 2.35rem;
+    font-size: 2.85rem;
+  }
+
+  .logo-pair {
+    gap: 12px;
+  }
+
+  .logo-pair .logo-rsf {
+    height: 36px;
+  }
+
+  .logo-salesforce {
+    height: 52px;
+    max-width: 110px;
+  }
+
+  .logo-times {
+    font-size: 1.55rem;
+  }
+
+  .skill-panel.is-wide .tech-grid,
+  .skill-panel.is-wide .tech-grid-tools {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
   }
 
   .cta-row,
