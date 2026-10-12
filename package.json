@@ -1,0 +1,15 @@
+{
+  "name": "francesco-mok-portfolio",
+  "private": true,
+  "version": "1.0.0",
+  "type": "module",
+  "scripts": {
+    "dev": "node scripts/serve.js",
+    "export:pdf": "node scripts/export-pdf.js"
+  },
+  "devDependencies": {
+    "pdf-lib": "^1.17.1",
+    "pdfjs-dist": "^6.4.299",
+    "playwright": "^1.56.1"
+  }
+}

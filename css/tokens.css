@@ -1,0 +1,27 @@
+:root {
+  --bg: #0a192f;
+  --bg-elevated: #112240;
+  --bg-hover: #1b3048;
+  --text: #ccd6f6;
+  --text-dim: #8892b0;
+  --accent: #64ffda;
+  --accent-soft: rgba(100, 255, 218, 0.1);
+  --line: rgba(136, 146, 176, 0.28);
+  --sans: "Inter", "Segoe UI", sans-serif;
+  --mono: "JetBrains Mono", ui-monospace, monospace;
+  --shadow: 0 16px 40px rgba(2, 12, 27, 0.35);
+  --radius: 8px;
+  --header-offset: 72px;
+}
+
+.sr-only {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  padding: 0;
+  margin: -1px;
+  overflow: hidden;
+  clip: rect(0, 0, 0, 0);
+  white-space: nowrap;
+  border: 0;
+}
