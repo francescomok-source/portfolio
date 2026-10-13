@@ -273,8 +273,7 @@ img {
   margin-top: 12px;
 }
 
-.icon-link,
-.text-link {
+.icon-link {
   color: var(--text-dim);
   text-decoration: none;
 }
@@ -287,15 +286,8 @@ img {
   border-radius: 4px;
 }
 
-.icon-link:hover,
-.text-link:hover {
+.icon-link:hover {
   color: var(--accent);
-}
-
-.text-link {
-  font-family: var(--mono);
-  font-size: 12px;
-  margin-left: 6px;
 }
 
 .content {
@@ -858,8 +850,7 @@ img {
 
 .link-list a:hover,
 .colophon a:hover,
-.phone-line a:hover,
-.text-link:hover {
+.phone-line a:hover {
   text-decoration: underline;
   text-underline-offset: 3px;
 }

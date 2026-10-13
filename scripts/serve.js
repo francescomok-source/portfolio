@@ -2,6 +2,7 @@ import http from "node:http";
 import fs from "node:fs";
 import path from "node:path";
 import { fileURLToPath } from "node:url";
+import { applyCopy } from "./apply-copy.mjs";
 
 const root = path.resolve(path.dirname(fileURLToPath(import.meta.url)), "..");
 const port = Number(process.env.PORT || 4173);
@@ -50,6 +51,7 @@ export function startServer(listenPort = port) {
 }
 
 if (process.argv[1] && path.resolve(process.argv[1]) === fileURLToPath(import.meta.url)) {
+  applyCopy();
   const server = await startServer();
   console.log(`Portfolio: http://127.0.0.1:${server.address().port}/`);
 }

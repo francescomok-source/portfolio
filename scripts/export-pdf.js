@@ -5,6 +5,7 @@ import { fileURLToPath } from "node:url";
 import { chromium } from "playwright";
 import { PDFDocument } from "pdf-lib";
 import { startServer } from "./serve.js";
+import { applyCopy } from "./apply-copy.mjs";
 
 const require = createRequire(import.meta.url);
 const root = path.resolve(path.dirname(fileURLToPath(import.meta.url)), "..");
@@ -22,19 +23,27 @@ const requiredPhrases = [
   "EPITA",
   "six-month",
   "Python",
-  "Intermediate",
+  "english track",
+  "19 years old",
+  "Time Management",
   "Critical Thinking",
   "French",
   "English",
   "Spanish",
   "The Minotaur Project",
+  "Game Development",
+  "Technical Documentation",
   "labyrinth",
   "lolympe-minotaur-project.neocities.org",
   "Reporters Without Borders",
+  "Team Collaboration",
   "Salesforce",
   "SOQL",
-  "Summer 2026",
+  "July 2026",
+  "Grocery Store Internship",
+  "City Hall Observation Internship",
   "February 2027",
+  "Cybersecurity",
   "Cultural Heritage",
   "Pokémon",
   "francesco.mok@gmail.com",
@@ -224,6 +233,8 @@ async function renderPreview(browser) {
   await page.close();
 }
 
+applyCopy();
+
 let server;
 if (!process.env.PORTFOLIO_URL) {
   server = await startServer(4173);
@@ -233,7 +244,8 @@ const printUrl = process.env.PORTFOLIO_URL || "http://127.0.0.1:4173/print.html"
 
 let browser;
 try {
-  browser = await chromium.launch(process.env.CHROME_PATH ? { executablePath: process.env.CHROME_PATH } : {});
+  const launchOptions = process.env.CHROME_PATH ? { executablePath: process.env.CHROME_PATH } : {};
+  browser = await chromium.launch(launchOptions).catch(() => chromium.launch({ channel: "msedge" }));
   const page = await browser.newPage();
   await page.goto(printUrl, { waitUntil: "networkidle" });
   await page.evaluate(async () => {

@@ -32,11 +32,9 @@
       <header class="side" id="top">
         <div class="side-main">
           <h1>Francesco Mok<span class="accent-dot"></span></h1>
-          <p class="role">Computer Science Student at EPITA.</p>
-          <p class="pitch">Interested in building software, exploring technologies and solving real-world problems.</p>
-          <p class="availability">
-            Currently seeking a six-month IT internship to strengthen technical skills and gain further professional experience.
-          </p>
+          <p class="role" data-copy="identity.role">Computer Science Student at EPITA.</p>
+          <p class="pitch" data-copy="identity.pitch">Interested in building software, exploring technologies and solving real-world problems.</p>
+          <p class="availability" data-copy="identity.availability">Currently seeking a six-month IT internship to strengthen technical skills and gain further professional experience.</p>
           <nav id="section-nav" class="nav" aria-label="Sections">
             <ol>
               <li><a href="#about"><span class="nav-index">01</span>About Me</a></li>
@@ -52,19 +50,18 @@
         <div class="side-foot">
           <p class="status"><span class="status-dot" aria-hidden="true"></span>Seeking a six-month IT internship</p>
           <div class="socials">
-            <a class="icon-link" href="mailto:francesco.mok@gmail.com" aria-label="Email Francesco Mok">
+            <a class="icon-link" data-href="identity.emailHref" href="mailto:francesco.mok@gmail.com" aria-label="Email Francesco Mok">
               <svg viewBox="0 0 24 24" width="18" height="18" aria-hidden="true" fill="none">
                 <rect x="3" y="5" width="18" height="14" rx="2" stroke="currentColor" stroke-width="1.5" />
                 <path d="M4 7l8 6 8-6" stroke="currentColor" stroke-width="1.5" />
               </svg>
             </a>
-            <a class="icon-link" href="https://www.linkedin.com/in/francesco-mok-74b28424b" target="_blank" rel="noreferrer noopener" aria-label="LinkedIn profile (opens in a new tab)">
+            <a class="icon-link" data-href="identity.linkedinUrl" href="https://www.linkedin.com/in/francesco-mok-74b28424b" target="_blank" rel="noreferrer noopener" aria-label="LinkedIn profile (opens in a new tab)">
               <svg viewBox="0 0 24 24" width="18" height="18" aria-hidden="true" fill="none">
                 <rect x="3" y="3" width="18" height="18" rx="2" stroke="currentColor" stroke-width="1.5" />
                 <path d="M8 11v6M8 8h.01M12 17v-4.2a2 2 0 0 1 4 0V17" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" />
               </svg>
             </a>
-            <a class="text-link" href="./print.html">A4 version</a>
           </div>
         </div>
       </header>
@@ -78,9 +75,9 @@
           </div>
           <div class="about-layout">
             <div class="about-copy">
-              <p>I'm Francesco, a second-year Computer Science student at EPITA in english track with a passion for technology and a curiosity about how things work.</p>
-              <p>What I enjoy most about computer science is the opportunity to turn ideas into real projects, experiment with new technologies and find creative solutions to problems. From developing a video game during my first year to discovering the professional world at Reporters Without Borders, each experience has helped me grow both technically and personally.</p>
-              <p>Beyond programming, I enjoy exploring different cultures, gaming and keeping up with digital trends. I'm always eager to learn something new, challenge myself and discover where my interests in technology will take me next.</p>
+              <p data-copy="about.p0">I'm Francesco, a second-year Computer Science student at EPITA, studying in the english track. I have a passion for technology and a curiosity about how things work.</p>
+              <p data-copy="about.p1">What I enjoy most about computer science is the opportunity to turn ideas into real projects, experiment with new technologies and find creative solutions to problems. From developing a video game during my first year to discovering the professional world at Reporters Without Borders, each experience has helped me grow both technically and personally.</p>
+              <p data-copy="about.p2">Beyond programming, I enjoy exploring different cultures, gaming and keeping up with digital trends. I'm always eager to learn something new, challenge myself and discover where my interests in technology will take me next.</p>
             </div>
             <aside class="about-aside" aria-label="Profile">
               <figure class="portrait-frame" data-portrait="./public/images/profile.jpg">
@@ -89,10 +86,10 @@
                 </div>
               </figure>
               <dl>
-                <div><dt>Institution</dt><dd>EPITA</dd></div>
-                <div><dt>Programme</dt><dd>Second-year Computer Engineering, Preparatory cycle (english track)</dd></div>
-                <div><dt>Nationality</dt><dd>French</dd></div>
-                <div><dt>Age</dt><dd>19 years old</dd></div>
+                <div><dt>Institution</dt><dd data-copy="about.institution">EPITA</dd></div>
+                <div><dt>Programme</dt><dd data-copy="about.programme">Second-year Computer Engineering, Preparatory cycle (english track)</dd></div>
+                <div><dt>Nationality</dt><dd data-copy="about.nationality">French</dd></div>
+                <div><dt>Age</dt><dd data-copy="about.age">19 years old</dd></div>
               </dl>
             </aside>
           </div>
@@ -108,7 +105,7 @@
             </div>
             <div>
               <h3>Education</h3>
-              <p>EPITA is a French engineering school specialising in computer science and digital technologies. Its curriculum combines strong foundations in programming, mathematics and algorithms with practical projects, teamwork and problem-solving, preparing students for careers in software engineering and emerging technologies.</p>
+              <p data-copy="about.education">EPITA is a French engineering school specialising in computer science and digital technologies. Its curriculum combines strong foundations in programming, mathematics and algorithms with practical projects, teamwork and problem-solving, preparing students for careers in software engineering and emerging technologies.</p>
             </div>
           </div>
         </section>
@@ -158,7 +155,7 @@
                     <li>
                       <img src="./public/images/skills/cloud-computing.png" alt="" width="56" height="56" />
                       <span class="skill-name">Cloud Computing</span>
-                      <span class="tech-note">(Salesforce Tools / SOQL)</span>
+                      <span class="tech-note" data-copy="skills.cloudNote">(Salesforce Tools / SOQL)</span>
                     </li>
                   </ul>
                 </section>
@@ -168,21 +165,21 @@
               <article class="skill-panel is-wide">
                 <h3>Professional Skills</h3>
                 <ul>
-                  <li class="skill"><div class="skill-top"><span class="skill-name">Critical Thinking</span></div><p>Analytical approach to technical challenges and problem solving.</p></li>
-                  <li class="skill"><div class="skill-top"><span class="skill-name">Autonomy</span></div><p>Ability to organise tasks and progress independently.</p></li>
-                  <li class="skill"><div class="skill-top"><span class="skill-name">Professionalism</span></div><p>Respect for responsibilities, deadlines and professional working practices.</p></li>
-                  <li class="skill"><div class="skill-top"><span class="skill-name">Teamwork</span></div><p>Experience collaborating in academic and professional environments.</p></li>
-                  <li class="skill"><div class="skill-top"><span class="skill-name">Patience</span></div><p>Persistence when facing technical challenges.</p></li>
-                  <li class="skill"><div class="skill-top"><span class="skill-name">Time Management</span></div><p>Communication and adaptability skills.</p></li>
+                  <li class="skill"><div class="skill-top"><span class="skill-name" data-copy="skills.professional.0.name">Critical Thinking</span></div><p data-copy="skills.professional.0.text">Analytical approach to technical challenges and problem solving.</p></li>
+                  <li class="skill"><div class="skill-top"><span class="skill-name" data-copy="skills.professional.1.name">Autonomy</span></div><p data-copy="skills.professional.1.text">Ability to organise tasks and progress independently.</p></li>
+                  <li class="skill"><div class="skill-top"><span class="skill-name" data-copy="skills.professional.2.name">Professionalism</span></div><p data-copy="skills.professional.2.text">Respect for responsibilities, deadlines and professional working practices.</p></li>
+                  <li class="skill"><div class="skill-top"><span class="skill-name" data-copy="skills.professional.3.name">Teamwork</span></div><p data-copy="skills.professional.3.text">Experience collaborating in academic and professional environments.</p></li>
+                  <li class="skill"><div class="skill-top"><span class="skill-name" data-copy="skills.professional.4.name">Patience</span></div><p data-copy="skills.professional.4.text">Persistence when facing technical challenges.</p></li>
+                  <li class="skill"><div class="skill-top"><span class="skill-name" data-copy="skills.professional.5.name">Time Management</span></div><p data-copy="skills.professional.5.text">Ability to prioritise tasks, organise work and meet project deadlines</p></li>
                 </ul>
               </article>
             </div>
             <div class="languages">
               <h3>Languages</h3>
               <ul>
-                <li><span>French</span><span class="skill-level">Native</span></li>
-                <li><span>English</span><span class="skill-level">B2</span></li>
-                <li><span>Spanish</span><span class="skill-level">B1</span></li>
+                <li><span data-copy="skills.languages.0.name">French</span><span class="skill-level" data-copy="skills.languages.0.level">Native</span></li>
+                <li><span data-copy="skills.languages.1.name">English</span><span class="skill-level" data-copy="skills.languages.1.level">B2</span></li>
+                <li><span data-copy="skills.languages.2.name">Spanish</span><span class="skill-level" data-copy="skills.languages.2.level">B1</span></li>
               </ul>
             </div>
           </div>
@@ -202,7 +199,7 @@
               </div>
               <div class="shots">
                 <figure class="shot shot-game">
-                  <a href="https://lolympe-minotaur-project.neocities.org/project.html" target="_blank" rel="noreferrer noopener">
+                  <a data-href="minotaur.presentationUrl" href="https://lolympe-minotaur-project.neocities.org/project.html" target="_blank" rel="noreferrer noopener">
                     <img
                       src="./public/images/projects/minotaur-game.png"
                       width="587"
@@ -215,7 +212,7 @@
                   <figcaption>Gameplay screenshot</figcaption>
                 </figure>
                 <figure class="shot">
-                  <a href="https://lolympe-minotaur-project.neocities.org/" target="_blank" rel="noreferrer noopener">
+                  <a data-href="minotaur.websiteUrl" href="https://lolympe-minotaur-project.neocities.org/" target="_blank" rel="noreferrer noopener">
                     <img
                       src="./public/images/projects/minotaur-website.png"
                       width="1280"
@@ -229,28 +226,28 @@
                 </figure>
               </div>
               <div class="project-body">
-                <p class="kicker">Academic Game Development Project</p>
+                <p class="kicker" data-copy="minotaur.kicker">Academic Game Development Project</p>
                 <div class="project-title-row">
-                  <h3>The Minotaur Project</h3>
-                  <a class="icon-link" href="https://lolympe-minotaur-project.neocities.org/" target="_blank" rel="noreferrer noopener" aria-label="Project website (opens in a new tab)">
+                  <h3 data-copy="minotaur.title">The Minotaur Project</h3>
+                  <a class="icon-link" data-href="minotaur.websiteUrl" href="https://lolympe-minotaur-project.neocities.org/" target="_blank" rel="noreferrer noopener" aria-label="Project website (opens in a new tab)">
                     <svg viewBox="0 0 24 24" width="14" height="14" aria-hidden="true" fill="none">
                       <path d="M7 17L17 7M9 7h8v8" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" />
                     </svg>
                   </a>
                 </div>
-                <p>The Minotaur Project is a 2D single-player or multiplayer game inspired by the myth of Theseus and the Minotaur. Players enter a dangerous labyrinth and must find their way to the exit while avoiding the Minotaur. The game combines exploration, strategic decision-making and survival mechanics.</p>
-                <p class="context">First-year EPITA project involving the development of a 2D video game inspired by Greek mythology.</p>
+                <p data-copy="minotaur.summary">The Minotaur Project is a 2D single-player or multiplayer game inspired by the myth of Theseus and the Minotaur. Players enter a dangerous labyrinth and must find their way to the exit while avoiding the Minotaur. The game combines exploration, strategic decision-making and survival mechanics.</p>
+                <p class="context" data-copy="minotaur.context">First-year EPITA project involving the development of a 2D video game inspired by Greek mythology.</p>
                 <div class="block">
                   <h4>Contribution</h4>
                   <ul class="actions">
-                    <li>Creation of the game's promotional website using HTML and CSS, developed without website-building tools.</li>
+                    <li data-copy="minotaur.contribution">Creation of the game's promotional website using HTML and CSS, developed without website-building tools.</li>
                   </ul>
                 </div>
                 <div class="block">
                   <h4>What this developed</h4>
-                  <p>Website : Building the promotional website without a site generator meant working directly with page structure and CSS layout, alongside a Python game developed for a first-year EPITA project. I also learned how to use Git for version control and how to deploy a website.</p>
-                  <p>Game Development : Programmed interactive items, traps and various gameplay mechanics to enhance the player experience.</p>
-                  <p>Technical Documentation: Developed formal writing skills through the preparation of project reports and technical documentation.</p>
+                  <p data-copy="minotaur.developed.0">Website : Building the promotional website without a site generator meant working directly with page structure and CSS layout, alongside a Python game developed for a first-year EPITA project. I also learned how to use Git for version control and how to deploy a website.</p>
+                  <p data-copy="minotaur.developed.1">Game Development : Programmed interactive items, traps and various gameplay mechanics to enhance the player experience.</p>
+                  <p data-copy="minotaur.developed.2">Technical Documentation: Developed formal writing skills through the preparation of project reports and technical documentation.</p>
                 </div>
                 <ul class="badges" aria-label="Technologies">
                   <li>Python</li>
@@ -259,10 +256,10 @@
                 </ul>
                 <ul class="link-list">
                   <li>
-                    <a href="https://lolympe-minotaur-project.neocities.org/" target="_blank" rel="noreferrer noopener">Project website<span class="sr-only"> (opens in a new tab)</span></a>
+                    <a data-href="minotaur.websiteUrl" href="https://lolympe-minotaur-project.neocities.org/" target="_blank" rel="noreferrer noopener">Project website<span class="sr-only"> (opens in a new tab)</span></a>
                   </li>
                   <li>
-                    <a href="https://lolympe-minotaur-project.neocities.org/project.html" target="_blank" rel="noreferrer noopener">Project presentation<span class="sr-only"> (opens in a new tab)</span></a>
+                    <a data-href="minotaur.presentationUrl" href="https://lolympe-minotaur-project.neocities.org/project.html" target="_blank" rel="noreferrer noopener">Project presentation<span class="sr-only"> (opens in a new tab)</span></a>
                   </li>
                 </ul>
               </div>
@@ -301,7 +298,7 @@
           <div class="jobs">
             <article class="job">
               <div class="job-meta">
-                <p class="job-period">July 2026 - August 2026</p>
+                <p class="job-period" data-copy="rsf.period">July 2026 - August 2026</p>
               </div>
               <div class="job-body">
                 <div class="org-lockup">
@@ -321,31 +318,31 @@
                     />
                   </div>
                 </div>
-                <p>First-year IT internship at Reporters Without Borders, in collaboration with Salesforce. The main objective was to support the organisation and improvement of data-management processes.</p>
+                <p data-copy="rsf.summary">First-year IT internship at Reporters Without Borders, in collaboration with Salesforce. The main objective was to support the organisation and improvement of data-management processes.</p>
                 <h4>What this experience developed</h4>
                 <ul class="developed">
                   <li>
-                    <p class="developed-title"><span>Data Management</span><span class="kind">Technical skill</span></p>
-                    <p>Experience organising, filtering and cleaning professional database information using Salesforce tools. Introduction to SOQL and AI technologies.</p>
+                    <p class="developed-title"><span data-copy="rsf.developed.0.name">Data Management</span><span class="kind" data-copy="rsf.developed.0.kind">Technical skill</span></p>
+                    <p data-copy="rsf.developed.0.text">Experience organising, filtering and cleaning professional database information using Salesforce tools. Introduction to SOQL and AI technologies.</p>
                   </li>
                   <li>
-                    <p class="developed-title"><span>Team Collaboration</span><span class="kind">Behavioural skill</span></p>
-                    <p>Collaboration with professionals from different departments. Contribution to shared objectives and adaptation to team requirements.</p>
+                    <p class="developed-title"><span data-copy="rsf.developed.1.name">Team Collaboration</span><span class="kind" data-copy="rsf.developed.1.kind">Behavioural skill</span></p>
+                    <p data-copy="rsf.developed.1.text">Collaboration with professionals from different departments. Contribution to shared objectives and adaptation to team requirements.</p>
                   </li>
                   <li>
-                    <p class="developed-title"><span>Professional Communication</span><span class="kind">Transferable skill</span></p>
-                    <p>Regular participation in weekly meetings. Development of clear professional communication and progress reporting.</p>
+                    <p class="developed-title"><span data-copy="rsf.developed.2.name">Professional Communication</span><span class="kind" data-copy="rsf.developed.2.kind">Transferable skill</span></p>
+                    <p data-copy="rsf.developed.2.text">Regular participation in weekly meetings. Development of clear professional communication and progress reporting.</p>
                   </li>
                 </ul>
-                <p class="result">Development of practical experience in IT, Salesforce and data management within a professional organisation.</p>
-           <p>This internship resulted in becoming a volunteer for Reporters Without Borders until February 2027.</p>
+                <p class="result" data-copy="rsf.result">Development of practical experience in IT, Salesforce and data management within a professional organisation.</p>
+                <p data-copy="rsf.volunteer">Continued involvement with Reporters Without Borders as a volunteer, with activities planned until February 2027.</p>
               </div>
             </article>
             <div class="prior-list">
               <article class="prior-job">
-                <p class="job-period">June 2023</p>
-                <h3>Grocery Store Internship</h3>
-                <p>Collaborated with colleagues on daily operations and customer service, strengthening teamwork, organisation and reliability.</p>
+                <p class="job-period" data-copy="prior.0.period">June 2023</p>
+                <h3 data-copy="prior.0.title">Grocery Store Internship</h3>
+                <p data-copy="prior.0.text">Collaborated with colleagues on daily operations and customer service, strengthening teamwork, organisation and reliability.</p>
                 <ul class="prior-tags" aria-label="Skills">
                   <li>Teamwork</li>
                   <li>Organisation</li>
@@ -353,9 +350,9 @@
                 </ul>
               </article>
               <article class="prior-job">
-                <p class="job-period">May 2022</p>
-                <h3>City Hall Observation Internship</h3>
-                <p>Observed public service operations and administrative procedures, gaining insight into local government and electoral processes.</p>
+                <p class="job-period" data-copy="prior.1.period">May 2022</p>
+                <h3 data-copy="prior.1.title">City Hall Observation Internship</h3>
+                <p data-copy="prior.1.text">Observed public service operations and administrative procedures, gaining insight into local government and electoral processes.</p>
                 <ul class="prior-tags" aria-label="Skills">
                   <li>Public Administration</li>
                   <li>Observation</li>
@@ -379,8 +376,8 @@
               </div>
               <div>
                 <p class="interest-index">01</p>
-                <h3>Cultural Heritage &amp; Gastronomy</h3>
-                <p>Interest in Cambodian heritage and world cultures, especially their history, traditions and gastronomy. Particular curiosity about Southeast Asian culinary techniques.</p>
+                <h3 data-copy="interests.0.title">Cultural Heritage &amp; Gastronomy</h3>
+                <p data-copy="interests.0.text">Interest in Cambodian heritage and world cultures, especially their history, traditions and gastronomy. Particular curiosity about Southeast Asian culinary techniques.</p>
               </div>
             </article>
             <article class="interest interest-gaming">
@@ -389,8 +386,8 @@
               </div>
               <div>
                 <p class="interest-index">02</p>
-                <h3>Gaming &amp; Theorycrafting</h3>
-                <p>Strong interest in Pokémon, game mechanics, statistical optimisation and competitive strategy. Enjoyment of analysing game systems and developing effective strategies.</p>
+                <h3 data-copy="interests.1.title">Gaming &amp; Theorycrafting</h3>
+                <p data-copy="interests.1.text">Strong interest in Pokémon, game mechanics, statistical optimisation and competitive strategy. Enjoyment of analysing game systems and developing effective strategies.</p>
               </div>
             </article>
             <article class="interest interest-digital">
@@ -399,8 +396,8 @@
               </div>
               <div>
                 <p class="interest-index">03</p>
-                <h3>Digital Culture &amp; Visual Design</h3>
-                <p>Interest in digital trends and social-media recommendation algorithms, particularly YouTube and TikTok. Appreciation for modern fashion, visual aesthetics and contemporary design.</p>
+                <h3 data-copy="interests.2.title">Digital Culture &amp; Visual Design</h3>
+                <p data-copy="interests.2.text">Interest in digital trends and social-media recommendation algorithms, particularly YouTube and TikTok. Appreciation for modern fashion, visual aesthetics and contemporary design.</p>
               </div>
             </article>
           </div>
@@ -416,22 +413,22 @@
             <li class="goal">
               <span class="goal-index">01</span>
               <div>
-                <h3>Short-Term Goal</h3>
-                <p>Secure a six-month internship in IT to apply academic knowledge, develop technical skills and gain professional experience.</p>
+                <h3 data-copy="goals.0.title">Short-Term Goal</h3>
+                <p data-copy="goals.0.text">Secure a six-month internship in IT to apply academic knowledge, develop technical skills and gain professional experience.</p>
               </div>
             </li>
             <li class="goal">
               <span class="goal-index">02</span>
               <div>
-                <h3>Technical Development</h3>
-                <p>Continue strengthening programming skills in Python and C. Expand knowledge of software engineering, data technologies and cloud computing.</p>
+                <h3 data-copy="goals.1.title">Technical Development</h3>
+                <p data-copy="goals.1.text">Continue strengthening programming skills in Python and C. Expand knowledge of software engineering, data technologies and cloud computing.</p>
               </div>
             </li>
             <li class="goal">
               <span class="goal-index">03</span>
               <div>
-                <h3>Professional Exploration</h3>
-                <p>Identify a future specialisation based on practical experience and personal interests possibly in AI / Cybersecurity / Data Science.</p>
+                <h3 data-copy="goals.2.title">Professional Exploration</h3>
+                <p data-copy="goals.2.text">Identify a future specialisation based on practical experience and personal interests possibly in AI / Cybersecurity / Data Science.</p>
               </div>
             </li>
           </ol>
@@ -444,10 +441,10 @@
             <span class="section-rule" aria-hidden="true"></span>
           </div>
           <div class="cta-row">
-            <a class="btn" href="mailto:francesco.mok@gmail.com">francesco.mok@gmail.com</a>
-            <a class="btn btn-ghost" href="https://www.linkedin.com/in/francesco-mok-74b28424b" target="_blank" rel="noreferrer noopener">LinkedIn<span class="sr-only"> (opens in a new tab)</span></a>
+            <a class="btn" data-copy="identity.email" data-href="identity.emailHref" href="mailto:francesco.mok@gmail.com">francesco.mok@gmail.com</a>
+            <a class="btn btn-ghost" data-href="identity.linkedinUrl" href="https://www.linkedin.com/in/francesco-mok-74b28424b" target="_blank" rel="noreferrer noopener">LinkedIn<span class="sr-only"> (opens in a new tab)</span></a>
           </div>
-          <p class="phone-line">Phone <a href="tel:+33783248824">+33 7 83 24 88 24</a></p>
+          <p class="phone-line">Phone <a data-copy="identity.phone" data-href="identity.phoneHref" href="tel:+33783248824">+33 7 83 24 88 24</a></p>
         </section>
       </main>
     </div>
