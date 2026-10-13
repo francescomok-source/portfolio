@@ -754,6 +754,34 @@ img {
   font-size: 11px;
 }
 
+.jacket {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 12px;
+  padding: 4px 12px 14px;
+}
+
+.jacket figure {
+  margin: 0;
+  min-width: 0;
+}
+
+.jacket img {
+  width: 100%;
+  height: auto;
+  aspect-ratio: 1024 / 918;
+  object-fit: cover;
+  border-radius: 6px;
+  background: var(--bg);
+}
+
+.jacket figcaption {
+  margin-top: 6px;
+  color: var(--text-dim);
+  font-family: var(--mono);
+  font-size: 11px;
+}
+
 .project-body,
 .interest,
 .job-body {
@@ -1222,6 +1250,11 @@ html.js .reveal.is-in {
   .shot img,
   .shot-pending {
     height: 220px;
+  }
+
+  .jacket {
+    gap: 8px;
+    padding: 4px 12px 12px;
   }
 
   .shot-game img {
